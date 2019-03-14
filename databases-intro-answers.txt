@@ -1,0 +1,50 @@
+# Exercises
+
+> What data types do each of these values represent?
+
+A: 1. string, 2. number (integer), 3. date, 4. floating number, 5. money
+
+> Explain when a database would be used. Explain when a text file would be used.
+
+A: A database should be used in instances where we need data to persist longer than application runtime, when data is asynchronously mutated, when the data that we're storing becomes large (ex: hundreds of thousands of user profiles) etc. We could use a text file for storing data in cases where only a handful of people (maybe even just ourself) can modify the data. 
+
+> Describe one difference between SQL and other programming languages.
+
+A: SQL is a declarative, not procedural language. This means that when we access data, we can simply request the data without having to worry about THE WAY in which the data is gotten. The database engine simply figures out what algorithm is the most efficient, which allows us to focus more on what we wanted to actually do with the data that we querried. 
+
+> In your own words, explain how the pieces of a database system fit together at a high level.
+
+A: A database stores data in machine code, which makes searching, reading, modifying, etc. data efficient. Since humans can't read machine code, users must access the database via command line or a graphical interface. A user simply tells the database what information it wants, and the database engine figures out the most efficient way to accomplish the task. 
+
+> Explain the meaning of table, row, column, and value.
+
+A: A table is the made of rows, columns, values, and each table is usually a certain category (like "users"). Rows are horizontal, and usually represent a chunk of information for a given date, user, phone number, etc. A row is vertical, and represents a sub-category of the table. All cells within a given column should all represent the same kind of data/data type. A value is the information that's contained at a given intersection of a row and a column (aka it's a "cell").  
+
+> List three data types that can be used in a table.
+
+A: strings, objects, integers
+
+> Given this payments table, provide an English description of the following queries and include their results:
+
+A: From the payments table, get the values from the Date and Amount columns: Date 5/1/2016, 5/10/2016, 5/15/2016, 5/23/2016 Amount 1500.00, 37.00, 124.93, 54.72
+
+From the payments table, get the values from the Amount column that are greater than 500: Amount: 1500.00
+
+From the payments table, get all information from the payee Mega Foods: Date: 5/15/2016 Payee: Mega Foods Amount: 124.93 Memo: Groceries 
+
+> Given this users table, write SQL queries using the following criteria and include the output: The email and sign-up date for the user named DeAndre Data.
+The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+All the columns for the user ID equal to 4.
+
+A: 
+SELECT email, signup
+FROM users
+WHERE name = 'DeAndre Data';
+
+SELECT userid
+FROM users
+WHERE email = 'aleesia.algorithm@uw.edu';
+
+SELECT *
+FROM users
+WHERE userid = 4;
